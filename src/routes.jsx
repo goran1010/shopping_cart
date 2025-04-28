@@ -26,6 +26,7 @@ const routes = [
     ],
   },
   { path: "/contact", element: <Contact /> },
+  { path: "*", element: <ErrorPage /> },
 ];
 
 export default routes;

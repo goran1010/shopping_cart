@@ -8,3 +8,22 @@
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 }
+img {
+  max-width: 100%;
+  max-height: 200px;
+}
+.shopping {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+.card {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+.text-content {
+  display: flex;
+  align-items: end;
+}
+input {
+  max-width: 40px;
+}
