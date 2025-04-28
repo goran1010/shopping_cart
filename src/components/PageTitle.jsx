@@ -12,16 +12,22 @@ const PageTitle = ({ isErrorPage = false }) => {
     } else {
       switch (location.pathname) {
         case "/home":
-          title = "Home Page";
+          title = "Home Page - Shopify";
           break;
         case "/shop":
-          title = "Shop Page";
+          title = "Shop Page - Shopify";
           break;
         case "/contact":
-          title = "Contact Page";
+          title = "Contact Page - Shopify";
+          break;
+        case "/shop/shopping":
+          title = "Shopping Page - Shopify";
+          break;
+        case "/shop/my-cart":
+          title = "My Cart - Shopify";
           break;
         default:
-          title = "Shopping App";
+          title = "Shopping App - Shopify";
           break;
       }
     }

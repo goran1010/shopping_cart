@@ -3,7 +3,7 @@ import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home/Home";
 import Shop from "./components/Shop";
-import Shopping from "./components/Shopping";
+import Shopping from "./components/Shopping/Shopping";
 import MyCart from "./components/MyCart";
 
 const routes = [

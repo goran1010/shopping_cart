@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <Link className={styles.link} to="/home">
         Home Page
       </Link>

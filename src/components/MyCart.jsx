@@ -6,7 +6,6 @@ function MyCart() {
     (sum, item) => item.price * item.purchases + sum,
     0
   );
-  console.log(totalPayment);
   return (
     <div className="my-cart">
       {myCart.map((item) => {

@@ -1,17 +1,18 @@
 import { useOutletContext } from "react-router-dom";
+import styles from "./Shopping.module.css";
 
 function Shopping() {
   const { status, allItems, changePurchases, addToCart } = useOutletContext();
   if (status === "loading") return <div>loading...</div>;
   if (status === "fail") return <div>failed...</div>;
   return (
-    <div className="shopping">
+    <div className={styles.shopping}>
       {allItems.map((item) => {
         return (
-          <div className="card" key={item.id}>
+          <div className={styles.card} key={item.id}>
             <img src={item.image} alt="" />
 
-            <div className="text-content">
+            <div className={styles.text}>
               <p>{item.title}</p>
               <div>
                 <p>{item.price}$</p>

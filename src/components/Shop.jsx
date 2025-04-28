@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import PageTitle from "./PageTitle";
-import ShoppingNavbar from "./ShoppingNavbar";
+import ShoppingNavbar from "./ShoppingNavbar/ShoppingNavbar";
 import { useEffect, useState } from "react";
 
 function Shop() {
