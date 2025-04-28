@@ -11,7 +11,7 @@ function Shop() {
 
   function getAllItems(data) {
     const newItems = data.map((item) => {
-      return { ...item, purchases: 0 };
+      return { ...item, purchases: 1 };
     });
     setAllItems(newItems);
   }
@@ -22,19 +22,34 @@ function Shop() {
         item.purchases = e.target.value;
         return item;
       }
-      item.purchases = 0;
+      item.purchases = 1;
       return item;
     });
     setAllItems(newItems);
   }
 
   function addToCart(e) {
-    let newItem = allItems.filter(
+    let newItem = allItems.find(
       (item) => item.id === +e.target.getAttribute("data-id")
     );
-    setMyCart([...myCart, ...newItem]);
+    if (newItem.purchases === 0) return;
+    if (myCart.find((item) => item.id === newItem.id)) {
+      const newCart = myCart.map((item) => {
+        if (item.id === newItem.id) {
+          item.purchases = +item.purchases + +newItem.purchases;
+        }
+        return item;
+      });
+      setMyCart(newCart);
+      const newItems = allItems.map((item) => {
+        return { ...item, purchases: 1 };
+      });
+      setAllItems(newItems);
+      return;
+    }
+    setMyCart([...myCart, newItem]);
     const newItems = allItems.map((item) => {
-      return { ...item, purchases: 0 };
+      return { ...item, purchases: 1 };
     });
     setAllItems(newItems);
   }

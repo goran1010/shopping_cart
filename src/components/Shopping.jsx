@@ -13,16 +13,19 @@ function Shopping() {
 
             <div className="text-content">
               <p>{item.title}</p>
-              <input
-                type="number"
-                name="purchases"
-                id="purchases"
-                data-id={item.id}
-                min={0}
-                max={10}
-                value={item.purchases}
-                onChange={changePurchases}
-              />
+              <div>
+                <p>{item.price}$</p>
+                <input
+                  type="number"
+                  name="purchases"
+                  id="purchases"
+                  data-id={item.id}
+                  min={1}
+                  max={10}
+                  value={item.purchases}
+                  onChange={changePurchases}
+                />
+              </div>
             </div>
             <button data-id={item.id} onClick={addToCart}>
               Add to Cart
