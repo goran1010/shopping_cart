@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
-import PageTitle from "./PageTitle";
+import Navbar from "../Navbar/Navbar";
+import PageTitle from "../PageTitle";
+import styles from "./Home.module.css";
 
 function Home() {
   return (
