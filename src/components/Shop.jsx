@@ -69,7 +69,7 @@ function Shop() {
       })
       .catch((error) => {
         console.error(error);
-        setStatus("failed");
+        setStatus("fail");
       });
   }, []);
   return (
